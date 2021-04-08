@@ -27,7 +27,7 @@ const PlaceOrder = () => {
   const [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://serene-dawn-54027.herokuapp.com/products')
       .then(res => res.json())
       .then(data => {
         data.forEach(book => {
@@ -37,7 +37,7 @@ const PlaceOrder = () => {
         })
       })
 
-    fetch('http://localhost:5000/orders?email=' + loggedUser.email, {
+    fetch('https://serene-dawn-54027.herokuapp.com/orders?email=' + loggedUser.email, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
 
   const handleNext = () => {
     const newOrder = { ...loggedInUser, products };
-    fetch('http://localhost:5000/addOrder', {
+    fetch('https://serene-dawn-54027.herokuapp.com/addOrder', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newOrder)

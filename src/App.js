@@ -46,17 +46,17 @@ function App() {
             <Header></Header>
             <Login></Login>
           </Route>
-          <Route exact path="/checkOut/:id">
+          <PrivateRoute exact path="/checkOut/:id">
             <Header></Header>
             <CheckOut></CheckOut>
-          </Route>
-          <Route exact path="/checkOut/:id/placeOrder">
+          </PrivateRoute>
+          <PrivateRoute exact path="/checkOut/:id/placeOrder">
             <Header></Header>
             <PlaceOrder></PlaceOrder>
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <Header></Header>
             <NotFound></NotFound>

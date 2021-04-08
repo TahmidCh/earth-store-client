@@ -27,7 +27,7 @@ const Admin = () => {
             imgUrl: imgUrl
 
         }
-        const url = `http://localhost:5000/addproducts`;
+        const url = `https://serene-dawn-54027.herokuapp.com/addproducts`;
 
 
         fetch(url, {

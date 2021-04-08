@@ -17,7 +17,7 @@ const Orders = () => {
   const [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://serene-dawn-54027.herokuapp.com/products')
       .then(res => res.json())
       .then(data => {
         data.forEach(book => {
@@ -27,7 +27,7 @@ const Orders = () => {
         })
       })
 
-    fetch('http://localhost:5000/orders?email=' + loggedUser.email, {
+    fetch('https://serene-dawn-54027.herokuapp.com/orders?email=' + loggedUser.email, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
