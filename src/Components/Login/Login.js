@@ -119,18 +119,18 @@ const storeAuthToken = () => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   return (
-    <div>
+    <div className="login">
     <div className='container d-flex justify-content-center mt-1'>
       <div className="row">
         <div className="col-sm-12">
           {!newUser ? (
             <form
               onSubmit={handleSubmit(handleUserSubmit)}
-              className='login-form shadow bg-white rounded text-left p-3'
+              className='login-form bg-white rounded text-left p-3'
             >
 
               
-              <h4 className='font-weight-bold mb-4'>Login with your account</h4>
+              <h4 className='font-weight-bold mb-4'>Login</h4>
 
               <div className='customUser'>
 
@@ -155,12 +155,6 @@ const storeAuthToken = () => {
                   <input className="form-check-input" type='checkbox' label='Remember me' />
                   <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                 </div>
-                <div className="form-group col" id='formForget'>
-                  <span style={{ cursor: 'pointer', color: 'darkgray' }} onClick={() => resetPassword(user.email ? user.email : alert("please type your email"))} >
-                    Forgot Password? <br/>
-                    <b id="resPass"></b>
-                  </span>
-                </div>
               </div>
 
               {user != null && (
@@ -170,7 +164,7 @@ const storeAuthToken = () => {
               )}
 
               <div className="form-group">
-                <button className="btn btn-dark" style={{ width: '100%' }} variant='warning'  type='submit' >Login</button>
+                <button className="btn btn-warning" style={{ width: '100%' }} variant='warning'  type='submit' >Login</button>
               </div>
 
               <div className='form-group col' id='formForget' className='text-center mt-3'>
@@ -197,7 +191,7 @@ const storeAuthToken = () => {
 
             <form
               onSubmit={handleSubmit(handleUserSubmit)}
-              className='login-form shadow bg-white rounded text-left p-3'
+              className='login-form bg-white rounded text-left p-3'
             >
               <h4 className='font-weight-bold mb-4'>Create an Account</h4>
 
@@ -244,7 +238,7 @@ const storeAuthToken = () => {
               )}
 
               <div className="form-group">
-                <button className="btn btn-dark w-100" variant='primary' type='submit' >  Sign Up </button>
+                <button className="btn btn-warning w-100" variant='primary' type='submit' >  Sign Up </button>
 
                 <div className="form-group text-center mt-3" style={{ color: 'green' }} >
                   {user.success && (

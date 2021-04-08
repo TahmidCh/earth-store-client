@@ -1,6 +1,6 @@
 .cartVehicle:hover{
     cursor: pointer;
-    box-shadow: 1px 1px 10px rgb(255, 180, 180);
+    border: navy;
 }
 .cartVehicle img{
     max-width: 200px;

@@ -3,7 +3,6 @@ import Details from '../Details/Details';
 import './Home.css'
 
 
-
 const Home = () => {
 
     const [products, setProducts] = useState([]);
@@ -23,10 +22,12 @@ const Home = () => {
         <div className="container">
             <div className="row d-flex justify-content-center">
                 {
-                    loading ? <div className="spinner-grow" style={{width: '3rem', height: '3rem'}} role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div> : 
-                    products.map(details => <Details details={details}></Details>)
+                    loading ? <div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        </div> :
+                        products.map(details => <Details details={details}></Details>)
                 }
             </div>
 

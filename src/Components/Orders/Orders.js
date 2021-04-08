@@ -47,12 +47,6 @@ const Orders = () => {
     return (
         <div className="container mt-2">
 
-      <div className="d-flex justify-content-between mt-5">
-      <h6 className="">You have ordered total : {orders.length} book/s </h6> <h6>Your total price is BDT {totalPrice}</h6>
-      
-      </div>
-      <p>Please wait for a moment or reload the page</p>
-
       <table className="table table-striped">
         <thead className="table-light">
           <tr>
@@ -60,7 +54,7 @@ const Orders = () => {
             <th scope="col">Author</th>
             <th scope="col">Quantity</th>
             <th scope="col">Price</th>
-            <th scope="col">Delivery</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -71,7 +65,7 @@ const Orders = () => {
               <td>{book.products.author}</td>
               <td>1</td>
               <td>${book.products.price}</td>
-              <td>{(new Date(book.from)).toDateString('dd/MM/yyyy')}</td>
+              
             </tr>)
             )
           }

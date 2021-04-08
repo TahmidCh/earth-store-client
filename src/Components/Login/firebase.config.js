@@ -1,10 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBc7sVO51VQbIHngMbbJYyyWklS2fXC9lI",
-  authDomain: "fresh-valley13.firebaseapp.com",
-  projectId: "fresh-valley13",
-  storageBucket: "fresh-valley13.appspot.com",
-  messagingSenderId: "87396756887",
-  appId: "1:87396756887:web:f2d0dec47d6c3b90f728d2"
+  apiKey: "AIzaSyC2fYQhJwM9yRoz_9eW9RVT6u-7j9SjHqw",
+  authDomain: "where-to-98.firebaseapp.com",
+  projectId: "where-to-98",
+  storageBucket: "where-to-98.appspot.com",
+  messagingSenderId: "31039805659",
+  appId: "1:31039805659:web:ca30165bd81c69c7f414fe"
 };
-
-  export default firebaseConfig;
+export default firebaseConfig;

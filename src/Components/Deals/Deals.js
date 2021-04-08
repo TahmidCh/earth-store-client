@@ -3,7 +3,7 @@ import React from 'react';
 const Deals = () => {
     return (
         <div>
-            <h1 className="text-center text-success mt-5">Stay Tuned For Hot Deals.....!</h1>
+            <h3 className="text-center text mt-5">Coming soon..</h3>
         </div>
     );
 };
