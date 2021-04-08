@@ -20,7 +20,7 @@ const Admin = () => {
     const history = useHistory();
     const handleEventForm = data => {
         console.log(data)
-        const bookData = {
+        const elementData = {
             name: data.name,
             author: data.author,
             price: data.price,
@@ -33,7 +33,7 @@ const Admin = () => {
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(bookData)
+            body: JSON.stringify(elementData)
         })
             .then(res => res.json())
             .then(data => {

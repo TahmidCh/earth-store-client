@@ -30,9 +30,9 @@ const PlaceOrder = () => {
     fetch('https://serene-dawn-54027.herokuapp.com/products')
       .then(res => res.json())
       .then(data => {
-        data.forEach(book => {
-          if (book._id === id) {
-            setProducts(book);
+        data.forEach(element => {
+          if (element._id === id) {
+            setProducts(element);
           }
         })
       })
@@ -97,12 +97,12 @@ const PlaceOrder = () => {
         </thead>
         <tbody>
           {
-            orders.map(book =>
-            (<tr key={book._id}>
-              <td>{book.products.name}</td>
-              <td>{book.products.author}</td>
+            orders.map(element =>
+            (<tr key={element._id}>
+              <td>{element.products.name}</td>
+              <td>{element.products.author}</td>
               <td>1</td>
-              <td>${book.products.price}</td>
+              <td>${element.products.price}</td>
             </tr>)
             )
           }
